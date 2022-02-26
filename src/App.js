@@ -1,6 +1,6 @@
 import "./App.css";
-import Nav from "./components/Nav";
-import Nav2 from "./components/Nav2";
+import TopNav from "./components/TopNav";
+import BottomNav from "./components/BottomNav";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
@@ -14,13 +14,13 @@ const App = () => {
   return (
     <div>
       <UserContext.Provider value={user}>
-        <Nav2 />
+        <TopNav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
-        <Nav />
+        <BottomNav />
       </UserContext.Provider>
     </div>
   );
